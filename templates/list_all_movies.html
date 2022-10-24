@@ -6,4 +6,29 @@
 <h1 class="mb-5">All Movies</h1>
 <p class="mb-3">See our list of movie ratings below</p>
 <!-- TODO: Feature 1 -->
+
+<form action="/movies" method="post">
+
+    <table class="table">
+        <tr>
+            <th> Name </th>
+            <th> Event </th>
+            <th> Rating </th>
+        </tr>
+
+        {% for i in movies %}
+        <tr>
+
+            <td> {{i.name}} </td>
+            <td> {{i.director}} </td>
+            <td> {{i.rating}} </td>
+            
+        </tr>
+        {% endfor %}
+        <tr>
+            
+        </tr>
+    </table>
+
+</form>
 {% endblock %}
