@@ -43,5 +43,4 @@ def search_movies():
     # TODO: Feature 3
     title = request.args.get("movie_title")
     movie = movie_repository.get_movie_by_title(title)
-
     return render_template('search_movies.html', search_active=True, movie=movie)
