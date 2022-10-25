@@ -12,28 +12,27 @@
     <button type="submit" >Submit</button>
 </form>
 
-<form action="/movies" method="post">
+<br>
 
-    <table class="table">
+<table class = "table">
+    <tr>
+        <th>Movie</th>
+        <th>Director</th>
+        <th>Rating</th>
+    </tr>
+
+{% if movie != none %}
         <tr>
-            <th> Name </th>
-            <th> Director </th>
-            <th> Rating </th>
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.director }}</td>
+            <td>{{ movie.rating }}</td>
         </tr>
 
-        {% for i in movies %}
-        <tr>
 
-            <td> {{i.title}} </td>
-            <td> {{i.director}} </td>
-            <td> {{i.rating}} </td>
+{% else %}
 
-        </tr>
-        {% endfor %}
-        <tr>
+<h2>Movie not Found</h2>
 
-        </tr>
+{% endif %}
     </table>
-
-</form>
 {% endblock %}
