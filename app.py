@@ -28,8 +28,11 @@ def create_movie():
     # TODO: Feature 2
     # After creating the movie in the database, we redirect to the list all movies page
     title_movie = request.form.get('name')
+    title_movie = title_movie.title()
     director_movie = request.form.get('director')
+    director_movie = director_movie.title()
     rating_movie = request.form.get('rating')
+    rating_movie = rating_movie.title()
     movie_repository.create_movie(title_movie, director_movie, rating_movie)
     
     return redirect('/movies')
