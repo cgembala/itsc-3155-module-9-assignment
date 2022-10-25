@@ -5,10 +5,10 @@
 {% block body %}
 <h1 class="mb-5">Search Movie Ratings</h1>
 <p class="mb-3">Search for a movie rating below</p>
+<p>*First letter in each word need to be capitalized*</p>
 <!-- TODO: Feature 3 -->
 <form action="/movies/search" method="get">
-    <input type="text" name="movie_title" autocomplete="off">
-    <p>*Need to fill out with a capitol letter for each word*</p> <br><br>
+    <input type="text" name="movie_title" autocomplete="off" placeholder="Ex: Bee Movie"> <br><br>
     <button type="submit" >Submit</button>
 </form>
 
