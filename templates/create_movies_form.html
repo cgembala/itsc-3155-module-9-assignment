@@ -8,11 +8,12 @@
 <!-- TODO: Feature 2 -->
 <form action="/movies" method="post">
 	<label for="name">Movie Title:</label><br>
-	<input type="text" id="name" name="name" autocomplete="off"><br>
+	<input type="text" id="name" name="name" autocomplete="off" required><br>
 	<label for="director">Movie Director:</label><br>
-	<input type="text" id="director" name="director" autocomplete="off"><br>
+	<input type="text" id="director" name="director" autocomplete="off" required><br>
 	<label for="rating">Movie Rating:</label>
     <select id="rating" name="rating">
+    <option value="0">0</option>
     <option value=".5">.5</option>
     <option value="1">1</option>
     <option value="1.5">1.5</option>
