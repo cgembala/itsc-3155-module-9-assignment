@@ -5,7 +5,7 @@ from src.models.movie import Movie
 movie_repository = get_movie_repository()
 
 def test_create_movie():
-    
+    movie_repository._db.clear()
     
     movie_repository.create_movie('13 hours', 'Michael Bay', 5)
     assert len(movie_repository.get_all_movies()) == 1
